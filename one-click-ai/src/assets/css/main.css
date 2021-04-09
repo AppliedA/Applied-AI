@@ -1,3 +1,12 @@
 * {
     text-decoration: none;
 }
+
+:root {
+    --ai-orange: #ff9f43;
+    --ai-green: #3ed707;
+    --ai-blue: #3399ff;
+    --ai-pink: #f43783;
+    --ai-red: #ff5253;
+    --ai-violet: #9141ea;
+}
