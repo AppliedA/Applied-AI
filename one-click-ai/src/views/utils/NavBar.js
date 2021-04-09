@@ -37,8 +37,8 @@ export class NavBar extends Component {
                         if (target === "home") target = "";
 
                         return (
-                            <Link to={`/${target}`}>
-                                <ListItem button key={page}>
+                            <Link to={`/${target}`} key={page}>
+                                <ListItem button>
                                     <ListItemIcon>
                                         {this.renderIcons(page)}
                                     </ListItemIcon>
