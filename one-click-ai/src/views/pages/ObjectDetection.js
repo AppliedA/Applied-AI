@@ -16,7 +16,6 @@ export class ObjectDetection extends Component {
                 <Description desc="how r you bro"/>
                 <Tag tags = {["yes","no","NOONO"]}/>
                 <Yt src = "https://www.youtube.com/embed/tQ0yjYUFKAE" title = "yo"/>
-
             </div>
         )
     }
