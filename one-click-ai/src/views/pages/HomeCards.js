@@ -99,6 +99,7 @@ export class HomeCards extends Component {
                     <AccordionDetails className="flex flex-col">
                         {
                             data.links.map(link => {
+                                console.log("link "+ link.target);
                                 return (
                                     <NavLink className="card-navlink" to={this.props.match.url + link.target}>
                                         <ListItem button disableGutters={true}>
