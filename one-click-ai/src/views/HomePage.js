@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
@@ -15,14 +14,14 @@ export class HomePage extends Component {
 
     render() {
         return (
-            <Router>
+            <>
                 <NavBar />
                 <Switch>
                     <Route path="/" component={HomeCards} exact />
                     <Route path="/nlp" component={Nlp} />
                     <Route path="/ar" component={AR} />
                 </Switch>
-            </Router>
+            </>
         )
     }
 }

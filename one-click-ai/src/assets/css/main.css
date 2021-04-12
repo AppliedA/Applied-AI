@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
     text-decoration: none;
 }
@@ -9,4 +11,96 @@
     --ai-pink: #f43783;
     --ai-red: #ff5253;
     --ai-violet: #9141ea;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.card-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.card-img {
+    width: 40%;
+}
+
+.card-navlink {
+    width: 100%;
+    background-color: #ececec;
+    border-radius: 5px;
+    margin: 4px 0;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: black;
+    padding: 4px 0 4px 10px;
+}
+
+.nlp-card {
+    background-color: var(--ai-green);
+}
+
+.ar-card {
+    background-color: var(--ai-blue);
+}
+
+.dl-card {
+    background-color: var(--ai-red);
+}
+
+.iot-card {
+    background-color: var(--ai-pink);
+}
+
+.cv-card {
+    background-color: var(--ai-violet);
+}
+
+@media screen and (max-width: 1080px) {
+    .card {
+        width: 40%;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .card {
+        width: 80%;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
 }
