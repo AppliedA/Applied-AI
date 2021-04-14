@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Chip from '@material-ui/core/Chip';
 
-function Title({tags}){
-    return(
-        <div className="container">
-        {
-        tags.map(tag => 
-            <p key="tag.id">{tag}</p>
-        )
-        }
+function Title({ tags }) {
+    return (
+        <div className="flex justify-center" style={{ width: "100%", marginTop: "10px", marginBottom: "10px" }}>
+            {
+                tags.map(tag =>
+                    <div className="tags"><Chip label={tag} style={{ fontSize: "16px" }} color="primary" /></div>
+                )
+            }
         </div>
     )
 }

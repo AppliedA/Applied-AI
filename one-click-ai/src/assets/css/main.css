@@ -104,3 +104,53 @@ body {
         font-size: 0.9rem;
     }
 }
+
+.description {
+    width: 60%;
+    margin: 20px 0;
+    padding: 5px 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 625px) {
+    .description {
+        width: 80%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.tags {
+    margin: 0 10px;
+}
+
+.desc-img {
+    width: 30%;
+}
+
+.yt {
+    width: 60%;
+    height: 400px;
+}
+
+@media screen and (max-width: 625px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .desc-img {
+        width: 70%;
+    }
+
+    .yt {
+        width: 90%;
+        height: 250px;
+    }
+}
