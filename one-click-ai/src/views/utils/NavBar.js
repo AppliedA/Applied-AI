@@ -14,11 +14,63 @@ import HomeIcon from '@material-ui/icons/Home';
 import TranslateIcon from '@material-ui/icons/Translate';
 import CameraEnhanceIcon from '@material-ui/icons/CameraEnhance';
 import AddIcon from '@material-ui/icons/Add';
+import AddLocationIcon from '@material-ui/icons/AddLocation';
+import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
+import CameraFrontIcon from '@material-ui/icons/CameraFront';
+import CellWifiIcon from '@material-ui/icons/CellWifi';
+import ContactsIcon from '@material-ui/icons/Contacts';
+import ControlCameraIcon from '@material-ui/icons/ControlCamera';
+import FilterTiltShiftIcon from '@material-ui/icons/FilterTiltShift';
 
 
 export class NavBar extends Component {
     constructor() {
         super();
+        this.links = [
+            {
+                target: "/",
+                name: "Home"
+            },
+            {
+                target: "/nlp",
+                name: "NLP"
+            }
+            ,
+            {
+                target: "/ar",
+                name: "Augmented Reality"
+            }
+            ,
+            {
+                target: "/disaster-prediction",
+                name: "Disaster Prediction"
+            }
+            ,
+            {
+                target: "/face-mask-detection",
+                name: "Face Mask Detection"
+            }
+            ,
+            {
+                target: "/iot",
+                name: "Internet of Things"
+            }
+            ,
+            {
+                target: "/automatic-attendance",
+                name: "Automatic Attendance"
+            }
+            ,
+            {
+                target: "/object-detection",
+                name: "Object Detection"
+            }
+            ,
+            {
+                target: "/product-defect-prediction",
+                name: "Product Defect Detection"
+            }
+        ]
         this.state = {
             drawer: false,
         }
@@ -32,17 +84,16 @@ export class NavBar extends Component {
         >
             <List style={styles.fullList}>
                 {
-                    ["Home", "NLP", "AR"].map(page => {
-                        let target = page.toLowerCase();
-                        if (target === "home") target = "";
+                    this.links.map(page => {
+                        let target = page.target;
 
                         return (
-                            <Link to={`/${target}`} key={page}>
+                            <Link to={`${target}`} key={page.target}>
                                 <ListItem button>
                                     <ListItemIcon>
-                                        {this.renderIcons(page)}
+                                        {this.renderIcons(page.target)}
                                     </ListItemIcon>
-                                    <ListItemText style={styles.text} primary={page} />
+                                    <ListItemText style={styles.text} primary={page.name} />
                                 </ListItem>
                             </Link>
                         );
@@ -54,12 +105,26 @@ export class NavBar extends Component {
 
     renderIcons = (name) => {
         switch (name) {
-            case "Home":
+            case "/":
                 return <HomeIcon />;
-            case "NLP":
+            case "/nlp":
                 return <TranslateIcon />;
-            case "AR":
+            case "/ar":
                 return <CameraEnhanceIcon />;
+            case "/disaster-prediction":
+                return <AddLocationIcon />;
+            case "/product-defect-prediction":
+                return <CancelPresentationIcon />;
+            case "/automatic-attendance":
+                return <ContactsIcon />;
+            case "/iot":
+                return <CellWifiIcon />;
+            case "/face-mask-detection":
+                return <CameraFrontIcon />;
+            case "/targetted-ads":
+                return <ControlCameraIcon />;
+            case "/object-detection":
+                return <FilterTiltShiftIcon />;
             default:
                 return <AddIcon />
         }
@@ -105,7 +170,7 @@ const styles = {
         color: "black",
     },
     fullList: {
-        width: "40vw",
+        width: "auto",
     },
     flex: {
         display: "flex",
