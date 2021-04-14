@@ -96,8 +96,8 @@ export class HomeCards extends Component {
             target: "object-detection",
           },
           {
-            name: "Targetted Ads based on Gender/Age",
-            target: "targetted-ads",
+            name: "Targeted Ads based on Gender/Age",
+            target: "targeted-ads",
           },
         ],
       },
@@ -108,7 +108,7 @@ export class HomeCards extends Component {
         img: "./images/machine_learning.png",
         links: [
           {
-            name: "Book & Movie Recommendation System",
+            name: "Book/Movie Recommendation System",
             target: "book-movie",
           },
           {
