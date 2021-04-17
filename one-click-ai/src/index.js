@@ -2,8 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './views/HomePage';
-import './assets/css/main.css'
-import { BrowserRouter as Router, } from 'react-router-dom';
+import './assets/css/main.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import firebase from 'firebase/app';
+import 'firebase/storage';
+import { firebaseConfig } from './config/config';
+firebase.initializeApp(firebaseConfig);
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
