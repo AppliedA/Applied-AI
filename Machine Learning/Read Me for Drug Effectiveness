@@ -1,0 +1,19 @@
+The Drug Data Set is trained using Decision Tree Classifier using the Data Set hosted by IBM.
+
+This data set has been cleaned by me on IBM Watson as a result I can not push that into private git repo hence the Cleaned Data Set is hosted on IBM Server and then the ML model training has been done
+
+This dataset requires a little bit of pre-processing left which is done on the runtime in the Notebook Attached.
+
+As we expect our test results from the user we shall train the model with the complete data set available. 
+It has shown accuracy of 98.33% which is Great.
+
+It Requires 5 Attributes  : 
+1. Age  : A float number expected
+2. Sex  : 0 - Female 1 - Male
+3. BP   : 0 - High 1 - Low 2 - Normal
+4. Cholestrol : 0 - High 1 - Normal
+5 Na to K ratio in Blood : A float number expected
+
+Also needs A true value for the Test Set if possible to testify the results.
+Nevertheless the Model will predict according to the Data Set available.
+
