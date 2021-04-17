@@ -1,0 +1,4 @@
+The Drug Data Set is trained using Multivariate Regression using the Data Set hosted by IBM.
+
+This data set has been cleaned by me on IBM Watson as a result I can not push that into private git repo hence the Cleaned Data Set is hosted on IBM Server and then the ML model training has been done
+
