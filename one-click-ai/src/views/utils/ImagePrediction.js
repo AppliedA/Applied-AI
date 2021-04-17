@@ -118,9 +118,12 @@ const ImagePrediction = () => {
       console.log(error);
     }
   };
-  const handlePredict = () => {
+  const handlePredict = async () => {
     if (downloadUrl === '') return setMsg('Please Upload Image');
-    // TODO: AXIOS API REQUEST
+    // FIXME: Dummy API REQUEST
+    const { data } = await Axios.get(`https://randomuser.me/api`);
+    const tempDetails = data.results[0];
+    console.log(tempDetails);
   };
   return (
     <>
