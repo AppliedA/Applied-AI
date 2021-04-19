@@ -32,7 +32,7 @@ export class HomePage extends Component {
                     <Route path="/automatic-attendance" component={AutoAttendance}/>
                     <Route path="/iot" component={IOT}/>
                     <Route path="/face-mask-detection" component={FaceMask}/>
-                    <Route path="/targetted-ads" component={AdsMOL}/>
+                    <Route path="/targeted-ads" component={AdsMOL}/>
                 </Switch>
             </>
         )
