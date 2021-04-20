@@ -6,7 +6,6 @@ import {
 
 import NavBar from './utils/NavBar';
 import HomeCards from './pages/HomeCards';
-import Nlp from './pages/Nlp';
 import AR from './pages/AR';
 import AdsMOL from './pages/AdsMOL';
 import AutoAttendance from './pages/AutoAttendance';
@@ -24,7 +23,6 @@ export class HomePage extends Component {
                 <NavBar />
                 <Switch>
                     <Route path="/" component={HomeCards} exact />
-                    <Route path="/nlp" component={Nlp} />
                     <Route path="/ar" component={AR} />
                     <Route path="/object-detection" component={ObjectDetection}/>
                     <Route path="/disaster-prediction" component={DisasterPrediction}/>

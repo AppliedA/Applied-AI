@@ -7,13 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from "react-icons/go";
 
-export class Nlp extends Component {
+export class AdsMol extends Component {
     constructor() {
         super();
-        this.title1 = "Auto Attendance";
+        this.title1 = "Targeted Ads Based on Gender/Age";
         this.title2 = "Working Demo of Project";
         this.smalltitle1 = "Deep learning";
-        this.smalltitle2 = "Auto Attendance";
+        this.smalltitle2 = "Targeted Ads Based on Gender/Age";
         this.githublink = "#";
         this.description = "Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
     }
@@ -48,11 +48,11 @@ export class Nlp extends Component {
                     <br/>
                     <Yt src="https://www.youtube.com/embed/VpF6ajh59fI" title="AdsMol Video" />
                     <br/>
-                    <a href={this.githublink}><GoMarkGithub style={iconsize}/></a>
+                    <a href={this.githublink}><GoMarkGithub style={iconsize}/> Code on Github</a>
                 </div>
             </div>
         )
     }
 }
 
-export default Nlp;
+export default AdsMol;

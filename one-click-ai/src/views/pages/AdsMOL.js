@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { useMediaQuery } from 'react-responsive';
 import { Helmet } from 'react-helmet'
 import Title from '../utils/Title'
 import Description from '../utils/Description';
@@ -20,12 +21,18 @@ export class AdsMol extends Component {
     
     render() {
         let style = {
-            "width":"100%"
+            "width":"100%",
+            "display":"flex",
+            "flex-wrap":"wrap",
+            "justify-content": "center",
+            "align-items": "center"
         }
+
         let iconsize = {
             "height": "50px",
             "width" : "50px"
         }
+
         return (
             <div className="card-wrapper">
                 <Helmet>
@@ -36,9 +43,9 @@ export class AdsMol extends Component {
                     <SmallTitle title={this.smalltitle1}/>
                     <br/>
                     <br/>
-                    <div className="row">
-                        <div className="col-7 d-flex justify-content-center text-center"><Description desc={this.description} /></div>
-                        <div className="col-4 justify-content-center text-center"><img style={style} className="desc-img" src="https://picsum.photos/400/300" alt={this.title} /></div>
+                    <div style={style}>
+                        <Description desc={this.description} />
+                        <img className="desc-img" src="https://picsum.photos/400/300" alt={this.title} />
                     </div>
                     <br/>
                     <br/>
@@ -48,7 +55,7 @@ export class AdsMol extends Component {
                     <br/>
                     <Yt src="https://www.youtube.com/embed/VpF6ajh59fI" title="AdsMol Video" />
                     <br/>
-                    <a href={this.githublink}><GoMarkGithub style={iconsize}/></a>
+                    <a href={this.githublink}><GoMarkGithub style={iconsize}/> Code on Github</a>
                 </div>
             </div>
         )
