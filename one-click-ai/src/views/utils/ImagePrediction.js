@@ -166,11 +166,11 @@ const ImagePrediction = () => {
             style={{ backgroundColor: msgColor, color: 'white' }}
           />
         </Snackbar>
-        <h2>
+        <h2 className="p-3">
           Upload any image of disaster and our AI model will predict the
           disaster right on the browser!
         </h2>
-        <div className="upload__cover">
+        <div className="upload__cover mt-4">
           <div
             className={'upload__border ' + borderShadow}
             onDragOver={dragOver}
@@ -209,6 +209,7 @@ const ImagePrediction = () => {
             </div>
           </div>
         </div>
+        <div className="flex__newline"></div>
         <div className="upload">
           <Button
             onClick={handlePredict}
@@ -221,17 +222,21 @@ const ImagePrediction = () => {
           </Button>
         </div>
       </div>
+
       {downloadUrl !== '' ? (
-        <div className="flex img__flex__direction bottom" id="imgs">
-          <div className="align__center">
-            <h3>Input Image</h3>
-            <img src={downloadUrl} alt="input-img" />
+        <>
+          <div className="flex img__flex__direction bottom" id="imgs">
+            <div className="align__center m-4">
+              <h3>Input Image</h3>
+              <img src={downloadUrl} alt="input-img" />
+            </div>
+            <div className="align__center m-4">
+              <h3>Output Image</h3>
+              <img src={downloadUrl} alt="Output-img" />
+            </div>
           </div>
-          <div className="align__center">
-            <h3>Output Image</h3>
-            <img src={downloadUrl} alt="Output-img" />
-          </div>
-        </div>
+          <div className="flex__newline"></div>
+        </>
       ) : null}
     </>
   );
