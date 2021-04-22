@@ -32,7 +32,7 @@ export class HomePage extends Component {
                     <Route path="/" component={HomeCards} exact />
                     <Route path="/nlp" component={Sentiment} />
                     <Route path="/nlp-2" component={ImageCaptioning} />
-                    <Route path="/ar" component={RealtimeObjPloat} />
+                    <Route path="/ar-1" component={RealtimeObjPloat} />
                     <Route path="/ar-2" component={Maskingobj} />
                     <Route path="/disaster-prediction" component={DisasterPrediction}/>
                     <Route path="/product-defect-prediction" component={ProductDefect}/>

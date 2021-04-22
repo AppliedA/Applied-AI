@@ -6,14 +6,14 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-import ImagePrediction from '../utils/ImagePrediction';
+
 export class FaceMask extends Component {
   constructor() {
     super();
-    this.title1 = 'Auto Attendance';
+    this.title1 = 'Targeted Ads Based on Gender/Age';
     this.title2 = 'Working Demo of Project';
     this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Auto Attendance';
+    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
     this.githublink = '#';
     this.description =
       'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
@@ -22,13 +22,19 @@ export class FaceMask extends Component {
   render() {
     let style = {
       width: '100%',
+      display: 'flex',
+      'flex-wrap': 'wrap',
+      'justify-content': 'center',
+      'align-items': 'center',
     };
+
     let iconsize = {
       height: '50px',
       width: '50px',
     };
+
     return (
-      <div className="card-wrapper mb-4">
+      <div className="card-wrapper">
         <Helmet>
           <title>Targeted Ads Based on Gender/Age</title>
         </Helmet>
@@ -40,18 +46,13 @@ export class FaceMask extends Component {
           <SmallTitle title={this.smalltitle1} />
           <br />
           <br />
-          <div className="row">
-            <div className="col-7 d-flex justify-content-center text-center">
-              <Description desc={this.description} />
-            </div>
-            <div className="col-4 justify-content-center text-center">
-              <img
-                style={style}
-                className="desc-img"
-                src="https://picsum.photos/400/300"
-                alt={this.title}
-              />
-            </div>
+          <div style={style}>
+            <Description desc={this.description} />
+            <img
+              className="desc-img"
+              src="https://picsum.photos/400/300"
+              alt={this.title}
+            />
           </div>
           <br />
           <br />
@@ -64,11 +65,10 @@ export class FaceMask extends Component {
             title="AdsMol Video"
           />
           <br />
+          <a href={this.githublink}>
+            <GoMarkGithub style={iconsize} /> Code on Github
+          </a>
         </div>
-        <ImagePrediction />
-        <a href={this.githublink}>
-          <GoMarkGithub style={iconsize} />
-        </a>
       </div>
     );
   }
