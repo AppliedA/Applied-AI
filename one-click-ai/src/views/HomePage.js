@@ -14,6 +14,7 @@ import FaceMask from './pages/FaceMask';
 import IOT from './pages/IOT';
 import ObjectDetection from './pages/ObjectDetection';
 import ProductDefect from './pages/ProductDefect';
+import Footer from './utils/Footer';
 
 export class HomePage extends Component {
 
@@ -24,14 +25,15 @@ export class HomePage extends Component {
                 <Switch>
                     <Route path="/" component={HomeCards} exact />
                     <Route path="/ar" component={AR} />
-                    <Route path="/object-detection" component={ObjectDetection}/>
-                    <Route path="/disaster-prediction" component={DisasterPrediction}/>
-                    <Route path="/product-defect-prediction" component={ProductDefect}/>
-                    <Route path="/automatic-attendance" component={AutoAttendance}/>
-                    <Route path="/iot" component={IOT}/>
-                    <Route path="/face-mask-detection" component={FaceMask}/>
-                    <Route path="/targeted-ads" component={AdsMOL}/>
+                    <Route path="/object-detection" component={ObjectDetection} />
+                    <Route path="/disaster-prediction" component={DisasterPrediction} />
+                    <Route path="/product-defect-prediction" component={ProductDefect} />
+                    <Route path="/automatic-attendance" component={AutoAttendance} />
+                    <Route path="/iot" component={IOT} />
+                    <Route path="/face-mask-detection" component={FaceMask} />
+                    <Route path="/targeted-ads" component={AdsMOL} />
                 </Switch>
+                <Footer />
             </>
         )
     }
