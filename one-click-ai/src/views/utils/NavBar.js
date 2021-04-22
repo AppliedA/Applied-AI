@@ -142,9 +142,10 @@ export class NavBar extends Component {
             <div style={styles.root}>
                 <AppBar position="static">
                     <Toolbar style={styles.flex}>
+                        <img style={{ width: "40px" }} src="./images/logo.png" alt="one click ai logo" />
                         <Typography variant="h6">
                             One Click AI
-                            </Typography>
+                        </Typography>
                         <IconButton edge="start" onClick={this.toggleDrawer(true)} color="inherit" aria-label="menu">
                             <MenuIcon />
                         </IconButton>
