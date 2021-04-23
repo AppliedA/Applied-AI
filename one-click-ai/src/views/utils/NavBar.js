@@ -15,6 +15,12 @@ import AddIcon from '@material-ui/icons/Add';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import { Grid } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 
 export class NavBar extends Component {
@@ -37,11 +43,86 @@ export class NavBar extends Component {
                 target: "https://www.youtube.com/",
                 name: "YouTube"
             },
-        ]
+        ];
+        this.project_list = [
+            {
+                target: "/nlp",
+                name: "Sentiment Analysis"
+            },
+            {
+                target: "/nlp-2",
+                name: "Image Captioning"
+            },
+            {
+                target: "/ar-1",
+                name: "Real Time Object Plotation"
+            },
+            {
+                target: "/ar-2",
+                name: "Masking Object"
+            },
+            {
+                target: "/disaster-prediction",
+                name: "Disaster Prediction"
+            },
+            {
+                target: "/product-defect-prediction",
+                name: "Product Defect Predection"
+            },
+            {
+                target: "/automatic-attendance",
+                name: "Automatic Attendance"
+            },
+            {
+                target: "/alexa",
+                name: "Alexa"
+            },
+            {
+                target: "/car",
+                name: "Car"
+            },
+            {
+                target: "/security",
+                name: "Security"
+            },
+            {
+                target: "/face-mask-detection",
+                name: "Face Mask Detection"
+            },
+            {
+                target: "/object-detection",
+                name: "Object Detection"
+            },
+            {
+                target: "/targeted-ads",
+                name: "Targetted Ads"
+            },
+            {
+                target: "/book-movie",
+                name: "Movie Recommendation System"
+            },
+            {
+                target: "/car-price",
+                name: "Car Price"
+            },
+            {
+                target: "/drug",
+                name: "Drug Effectiveness"
+            }
+        ];
         this.state = {
             drawer: false,
+            open: false,
         }
     }
+
+    handleOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleClose = () => {
+        this.setState({ open: false });
+    };
 
     drawer = () => (
         <div
@@ -58,7 +139,7 @@ export class NavBar extends Component {
 
                             (page.name === "Home"
                                 ?
-                                <Link to={`${target}`} key={page.target}>
+                                <Link to={`${target}`} className="link-sidebar" key={page.target}>
                                     <ListItem button>
                                         <ListItemIcon>
                                             {this.renderIcons(page.name)}
@@ -66,14 +147,26 @@ export class NavBar extends Component {
                                         <ListItemText style={styles.text} primary={page.name} />
                                     </ListItem>
                                 </Link>
-                                : <a target="_blank" rel="noreferrer" href={`${target}`} key={page.target}>
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            {this.renderIcons(page.name)}
-                                        </ListItemIcon>
-                                        <ListItemText style={styles.text} primary={page.name} />
-                                    </ListItem>
-                                </a>
+                                : (page.name === "Projects"
+                                    ?
+                                    <div onClick={this.handleOpen} key={page.target}>
+                                        <ListItem button>
+                                            <ListItemIcon>
+                                                {this.renderIcons(page.name)}
+                                            </ListItemIcon>
+                                            <ListItemText style={styles.text} primary={page.name} />
+                                        </ListItem>
+                                    </div>
+                                    :
+                                    <a target="_blank" rel="noreferrer" href={`${target}`} className="link-sidebar" key={page.target}>
+                                        <ListItem button>
+                                            <ListItemIcon>
+                                                {this.renderIcons(page.name)}
+                                            </ListItemIcon>
+                                            <ListItemText style={styles.text} primary={page.name} />
+                                        </ListItem>
+                                    </a>
+                                )
                             )
                         );
                     })
@@ -129,6 +222,47 @@ export class NavBar extends Component {
                         </SwipeableDrawer>
                     </Toolbar>
                 </AppBar>
+                {/* projects modal */}
+                <Modal
+                    aria-labelledby="transition-modal-title"
+                    aria-describedby="transition-modal-description"
+                    open={this.state.open}
+                    onClose={this.handleClose}
+                    className="modal-cu"
+                    closeAfterTransition
+                    BackdropComponent={Backdrop}
+                    BackdropProps={{
+                        timeout: 500,
+                    }}
+                >
+                    <Fade in={this.state.open}>
+                        <div className="paper-cu">
+                            <h2 id="transition-modal-title">All Projects List</h2>
+                            <Grid
+                                container
+                                direction="column"
+                                justify="center"
+                                alignItems="center"
+                            >
+                                {
+                                    this.project_list.map((project, index) => {
+                                        return (
+                                            <Link to={project.target} onClick={() => { this.setState({ open: false }) }}>
+                                                <Card className="project_card" variant="outlined" key={index}>
+                                                    <CardContent>
+                                                        <Typography style={styles.title} color="textPrimary" gutterBottom>
+                                                            {project.name}
+                                                        </Typography>
+                                                    </CardContent>
+                                                </Card>
+                                            </Link>
+                                        );
+                                    })
+                                }
+                            </Grid>
+                        </div>
+                    </Fade>
+                </Modal>
             </div>
         );
 
@@ -146,7 +280,12 @@ const styles = {
     flex: {
         display: "flex",
         justifyContent: "space-between",
-    }
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: "#e6e6e6"
+    },
 }
 
 export default NavBar;

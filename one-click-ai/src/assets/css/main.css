@@ -328,3 +328,39 @@ body {
     width: 80vw;
   }
 }
+
+.link-sidebar:hover,
+.link-sidebar:focus {
+  text-decoration: none;
+}
+
+.modal-cu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper-cu {
+  background-color: #424242;
+  border: 2px solid rgb(73, 73, 73);
+  padding: 15px 25px;
+  color: white;
+  overflow-y: auto;
+  height: 90vh;
+}
+
+.project_card {
+  min-width: 80vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: rgba(255, 255, 255, 0.2) 1px solid !important;
+  background: #272727 !important;
+}
+
+.project_card:hover {
+  background: #1d1d1d !important;
+}
+
+.paper-cu a:hover {
+  text-decoration: none;
+}
