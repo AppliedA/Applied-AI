@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
 
-export class DisasterPrediction extends Component {
+export class ImageCaptioning extends Component {
   constructor() {
     super();
     this.title1 = 'Targeted Ads Based on Gender/Age';
@@ -74,4 +74,4 @@ export class DisasterPrediction extends Component {
   }
 }
 
-export default DisasterPrediction;
+export default ImageCaptioning;

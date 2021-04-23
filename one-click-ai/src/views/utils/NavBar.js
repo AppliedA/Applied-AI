@@ -11,16 +11,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
-import TranslateIcon from '@material-ui/icons/Translate';
-import CameraEnhanceIcon from '@material-ui/icons/CameraEnhance';
 import AddIcon from '@material-ui/icons/Add';
-import AddLocationIcon from '@material-ui/icons/AddLocation';
-import CancelPresentationIcon from '@material-ui/icons/CancelPresentation';
-import CameraFrontIcon from '@material-ui/icons/CameraFront';
-import CellWifiIcon from '@material-ui/icons/CellWifi';
-import ContactsIcon from '@material-ui/icons/Contacts';
-import ControlCameraIcon from '@material-ui/icons/ControlCamera';
-import FilterTiltShiftIcon from '@material-ui/icons/FilterTiltShift';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 
 
 export class NavBar extends Component {
@@ -32,44 +26,17 @@ export class NavBar extends Component {
                 name: "Home"
             },
             {
-                target: "/nlp",
-                name: "NLP"
-            }
-            ,
+                target: "modal",
+                name: "Projects"
+            },
             {
-                target: "/ar",
-                name: "Augmented Reality"
-            }
-            ,
+                target: "https://github.com/AppliedA/Applied-AI",
+                name: "Github"
+            },
             {
-                target: "/disaster-prediction",
-                name: "Disaster Prediction"
-            }
-            ,
-            {
-                target: "/face-mask-detection",
-                name: "Face Mask Detection"
-            }
-            ,
-            {
-                target: "/iot",
-                name: "Internet of Things"
-            }
-            ,
-            {
-                target: "/automatic-attendance",
-                name: "Automatic Attendance"
-            }
-            ,
-            {
-                target: "/object-detection",
-                name: "Object Detection"
-            }
-            ,
-            {
-                target: "/product-defect-prediction",
-                name: "Product Defect Detection"
-            }
+                target: "https://www.youtube.com/",
+                name: "YouTube"
+            },
         ]
         this.state = {
             drawer: false,
@@ -88,14 +55,26 @@ export class NavBar extends Component {
                         let target = page.target;
 
                         return (
-                            <Link to={`${target}`} key={page.target}>
-                                <ListItem button>
-                                    <ListItemIcon>
-                                        {this.renderIcons(page.target)}
-                                    </ListItemIcon>
-                                    <ListItemText style={styles.text} primary={page.name} />
-                                </ListItem>
-                            </Link>
+
+                            (page.name === "Home"
+                                ?
+                                <Link to={`${target}`} key={page.target}>
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            {this.renderIcons(page.name)}
+                                        </ListItemIcon>
+                                        <ListItemText style={styles.text} primary={page.name} />
+                                    </ListItem>
+                                </Link>
+                                : <a href={`${target}`} key={page.target}>
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            {this.renderIcons(page.name)}
+                                        </ListItemIcon>
+                                        <ListItemText style={styles.text} primary={page.name} />
+                                    </ListItem>
+                                </a>
+                            )
                         );
                     })
                 }
@@ -104,27 +83,16 @@ export class NavBar extends Component {
     );
 
     renderIcons = (name) => {
+        name = name.toLowerCase();
         switch (name) {
-            case "/":
+            case "home":
                 return <HomeIcon />;
-            case "/nlp":
-                return <TranslateIcon />;
-            case "/ar":
-                return <CameraEnhanceIcon />;
-            case "/disaster-prediction":
-                return <AddLocationIcon />;
-            case "/product-defect-prediction":
-                return <CancelPresentationIcon />;
-            case "/automatic-attendance":
-                return <ContactsIcon />;
-            case "/iot":
-                return <CellWifiIcon />;
-            case "/face-mask-detection":
-                return <CameraFrontIcon />;
-            case "/targetted-ads":
-                return <ControlCameraIcon />;
-            case "/object-detection":
-                return <FilterTiltShiftIcon />;
+            case "projects":
+                return <LocalLibraryIcon />;
+            case "github":
+                return <GitHubIcon />;
+            case "youtube":
+                return <YouTubeIcon />;
             default:
                 return <AddIcon />
         }
