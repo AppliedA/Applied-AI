@@ -66,7 +66,7 @@ export class NavBar extends Component {
                                         <ListItemText style={styles.text} primary={page.name} />
                                     </ListItem>
                                 </Link>
-                                : <a href={`${target}`} key={page.target}>
+                                : <a target="_blank" rel="noreferrer" href={`${target}`} key={page.target}>
                                     <ListItem button>
                                         <ListItemIcon>
                                             {this.renderIcons(page.name)}
@@ -107,7 +107,7 @@ export class NavBar extends Component {
 
     render() {
         return (
-            <div style={styles.root}>
+            <div>
                 <AppBar position="static">
                     <Toolbar style={styles.flex}>
                         <Link to="/" ><img style={{ width: "40px" }} src="./images/logo.png" alt="one click ai logo" /></Link>

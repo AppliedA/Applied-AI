@@ -312,3 +312,19 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.MuiDrawer-paper {
+  width: 30vw;
+}
+
+@media screen and (max-width: 568px) {
+  .MuiDrawer-paper {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .MuiDrawer-paper {
+    width: 80vw;
+  }
+}

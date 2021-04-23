@@ -124,9 +124,9 @@ export class HomeCards extends Component {
     ];
   }
 
-  renderCards = data => {
+  renderCards = (data, index) => {
     return (
-      <Box className={data.class + ' card'} boxShadow={4}>
+      <Box className={data.class + ' card'} boxShadow={4} key={index}>
         <CardContent className="flex flex-col justify-center items-center">
           <img className="card-img" src={data.img} alt={data.name} />
         </CardContent>
@@ -139,12 +139,12 @@ export class HomeCards extends Component {
             <span className="card-text">{data.name}</span>
           </AccordionSummary>
           <AccordionDetails className="flex flex-col">
-            {data.links.map(link => {
-              console.log('link ' + link.target);
+            {data.links.map((link, index) => {
               return (
                 <NavLink
                   className="card-navlink"
                   to={this.props.match.url + link.target}
+                  key={index}
                 >
                   <ListItem button disableGutters={true}>
                     <span className="card-text">{link.name}</span>
@@ -164,7 +164,7 @@ export class HomeCards extends Component {
         <Helmet>
           <title>Home Page - One Click AI</title>
         </Helmet>
-        {this.domains.map(data => this.renderCards(data))}
+        {this.domains.map((data, index) => this.renderCards(data, index))}
       </div>
     );
   }
