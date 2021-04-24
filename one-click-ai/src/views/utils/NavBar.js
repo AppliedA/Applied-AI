@@ -200,7 +200,7 @@ export class NavBar extends Component {
           <Toolbar style={styles.flex}>
             <Link to="/">
               <img
-                style={{ width: "40px" }}
+                style={{ width: "42px" }}
                 src="./images/logo.png"
                 alt="one click ai logo"
               />
