@@ -160,12 +160,25 @@ export class HomeCards extends Component {
 
   render() {
     return (
-      <div className="card-wrapper">
+      <>
         <Helmet>
           <title>Applied AI Lab - One Click AI</title>
         </Helmet>
-        {this.domains.map((data, index) => this.renderCards(data, index))}
-      </div>
+        <div className="bg-video-wrapper">
+          <video loop muted className="bg-video" autoPlay>
+            <source src="./videos/video.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+          </video>
+          <div className="hero-section-wrapper">
+            <h1>Applied AI Lab</h1>
+            <span className="hero-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eveniet ipsa beatae, facilis nemo provident, aliquid explicabo deleniti quo eum laboriosam ex pariatur ipsum animi cumque cupiditate! Repellendus, omnis distinctio. Repellat dolores quisquam excepturi, non tempora magni temporibus culpa similique?</span>
+            <a href="#project-section" className="scroll-down">lorem ipsum</a>
+          </div>
+        </div>
+        <div className="card-wrapper" id="project-section">
+          {this.domains.map((data, index) => this.renderCards(data, index))}
+        </div>
+      </>
     );
   }
 }

@@ -18,6 +18,7 @@
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 .flex {
@@ -37,7 +38,7 @@ body {
 }
 
 .card-wrapper {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -363,4 +364,77 @@ body {
 
 .paper-cu a:hover {
   text-decoration: none;
+}
+
+.bg-video-wrapper {
+  position: relative;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bg-video-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.hero-section-wrapper {
+  z-index: 1;
+  color: white;
+  padding: 40px 0 0 40px;
+  margin-top: 20px;
+}
+
+.hero-desc {
+  display: block;
+  font-size: 18px;
+  margin-top: 30px;
+  width: 50vw;
+}
+
+.scroll-down {
+  display: block;
+  width: max-content;
+  margin-top: 50px;
+  border: 3px solid transparent;
+  background: #3F51B5;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.scroll-down:hover {
+  text-decoration: none;
+  color: inherit;
+  background: #1228a3;
+}
+
+.scroll-down:active {
+  text-decoration: none;
+  border: 3px solid #001cbb;
+}
+
+@media screen and (max-width: 625px) {
+  .hero-desc {
+    width: 80vw;
+  }
 }
