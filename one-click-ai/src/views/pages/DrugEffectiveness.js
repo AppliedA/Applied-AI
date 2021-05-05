@@ -6,18 +6,19 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
-export class DrugEffectiveness extends Component {
+import image from '../../images/drug_effectiveness.jpg';
+export class AdsMol extends Component {
   constructor() {
     super();
-    this.title1 = 'Targeted Ads Based on Gender/Age';
+    this.title1 = 'Drug Effectiveness on Various Human Factors';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
+    this.smalltitle1 = 'Machine Learning';
+    this.smalltitle2 = 'Drug Effectiveness on Various Human Factors';
     this.githublink = '#';
+    this.tags = ['sklearn','pandas','tkinter'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'Corona Virus has sparked concerns over the effectiveness of various drugs and vaccines. Human Factors play a vital role in deciding drug effectiveness. This project simplifies which drug is better suited for which human factors.'
+    }
 
   render() {
     let style = {
@@ -36,7 +37,7 @@ export class DrugEffectiveness extends Component {
     return (
       <div className="card-wrapper">
         <Helmet>
-          <title>Targeted Ads Based on Gender/Age</title>
+          <title>Drug Effectiveness</title>
         </Helmet>
         <div
           style={{ width: '100%' }}
@@ -47,10 +48,10 @@ export class DrugEffectiveness extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -61,17 +62,18 @@ export class DrugEffectiveness extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/VpF6ajh59fI"
-            title="AdsMol Video"
+            src="https://www.youtube.com/embed/iz-z7GJAmow"
+            title="Drug Effectiveness"
           />
           <br />
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
   }
 }
 
-export default DrugEffectiveness;
+export default AdsMol;

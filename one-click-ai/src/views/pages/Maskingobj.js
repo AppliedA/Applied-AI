@@ -6,18 +6,19 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
-export class Maskingobj extends Component {
+import image from '../../images/AR-image-masking.jpg';
+export class AdsMol extends Component {
   constructor() {
     super();
-    this.title1 = 'Targeted Ads Based on Gender/Age';
+    this.title1 = 'Masking Image/Video on Real World Object';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
+    this.smalltitle1 = 'AR/VR';
+    this.smalltitle2 = 'Masking Image/Video on Real World Object';
     this.githublink = '#';
+    this.tags = ['opencv','numpy','aruco'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'There is a dilemma under the hearts of great designers and presenters when there is a lack of White Screen for their Beautiful and Delightful Presentation. Here in this project we can wipe off their dilemmas as one can project their beautiful image or a delightful video on any real world object.'
+    }
 
   render() {
     let style = {
@@ -36,7 +37,7 @@ export class Maskingobj extends Component {
     return (
       <div className="card-wrapper">
         <Helmet>
-          <title>Targeted Ads Based on Gender/Age</title>
+          <title>Masking Image/Video on Real World Object</title>
         </Helmet>
         <div
           style={{ width: '100%' }}
@@ -47,10 +48,10 @@ export class Maskingobj extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -61,17 +62,18 @@ export class Maskingobj extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/VpF6ajh59fI"
-            title="AdsMol Video"
+            src="https://www.youtube.com/embed/a1JSAJqeAhc"
+            title="Masking Image/Video on Real World Object"
           />
           <br />
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
   }
 }
 
-export default Maskingobj;
+export default AdsMol;

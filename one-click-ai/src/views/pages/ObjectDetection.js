@@ -6,18 +6,18 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
-export class ObjectDetection extends Component {
+import image from '../../images/object_detection.jpeg';
+export class AdsMol extends Component {
   constructor() {
     super();
-    this.title1 = 'Targeted Ads Based on Gender/Age';
+    this.title1 = 'Object Detection';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
+    this.smalltitle1 = 'Computer Vision';
+    this.smalltitle2 = 'Object Detection';
     this.githublink = '#';
+    this.tags = ['yolo','keras','opencv'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'The most important feature of a human being is vision. To develop an Expert system one must enable them with vision. Vision implies detection of several objects. This project enables an expert system with the power of Vision and Object Identification.'    }
 
   render() {
     let style = {
@@ -36,7 +36,7 @@ export class ObjectDetection extends Component {
     return (
       <div className="card-wrapper">
         <Helmet>
-          <title>Targeted Ads Based on Gender/Age</title>
+          <title>Object Detection</title>
         </Helmet>
         <div
           style={{ width: '100%' }}
@@ -47,10 +47,10 @@ export class ObjectDetection extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -61,17 +61,18 @@ export class ObjectDetection extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/VpF6ajh59fI"
-            title="AdsMol Video"
+            src="https://www.youtube.com/embed/a6jLwwznBK4"
+            title="Object Detection"
           />
           <br />
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
   }
 }
 
-export default ObjectDetection;
+export default AdsMol;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Tag from './Tag';
-function Description({ desc }) {
-  const [tag, setTag] = useState(['tag1', 'tag2', 'tag3']);
+function Description({ desc , tags}) {
+  const [tag, setTag] = useState(tags);
   let style = {
     marginRight: '0px',
   };

@@ -6,18 +6,19 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
-export class CarPrice extends Component {
+import image from '../../images/car_price.png';
+export class AdsMol extends Component {
   constructor() {
     super();
-    this.title1 = 'Targeted Ads Based on Gender/Age';
+    this.title1 = 'Car Price Prediction';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
+    this.smalltitle1 = 'Machine Learning';
+    this.smalltitle2 = 'Car Price Prediction';
     this.githublink = '#';
+    this.tags = ['pandas','numpy','sklearn'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'Many People prefer used cars over the new ones but fail to estimate the perfect price of the car and end up paying hefty sums for a poor model. This project identifies various features of the car and estimates the perfect price of the car and saves money.'
+    }
 
   render() {
     let style = {
@@ -36,7 +37,7 @@ export class CarPrice extends Component {
     return (
       <div className="card-wrapper">
         <Helmet>
-          <title>Targeted Ads Based on Gender/Age</title>
+          <title>Car Price Prediction</title>
         </Helmet>
         <div
           style={{ width: '100%' }}
@@ -47,10 +48,10 @@ export class CarPrice extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -61,17 +62,18 @@ export class CarPrice extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/VpF6ajh59fI"
-            title="AdsMol Video"
+            src="https://www.youtube.com/embed/s3SZE3M33UI" 
+            title="Car Price Prediction"
           />
           <br />
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
   }
 }
 
-export default CarPrice;
+export default AdsMol;

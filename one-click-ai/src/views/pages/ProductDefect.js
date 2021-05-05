@@ -6,18 +6,19 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
-export class ProductDefect extends Component {
+import image from '../../images/product_defect.jpg';
+export class AdsMol extends Component {
   constructor() {
     super();
-    this.title1 = 'Targeted Ads Based on Gender/Age';
+    this.title1 = 'Product Defect Detection';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
-    this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
+    this.smalltitle1 = 'Deep Learning';
+    this.smalltitle2 = 'Product Defect Detection';
     this.githublink = '#';
+    this.tags = ['tensorflow','keras','PIL'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'Sometimes products we order online or buy packaged turns out to be damaged or defective in nature. This project resolves the issue by the use of 3d mapping and detecting the damaged portions of a product which is damaged eventually saving money of the customer.'
+    }
 
   render() {
     let style = {
@@ -36,7 +37,7 @@ export class ProductDefect extends Component {
     return (
       <div className="card-wrapper">
         <Helmet>
-          <title>Targeted Ads Based on Gender/Age</title>
+          <title>Product Defect Detection</title>
         </Helmet>
         <div
           style={{ width: '100%' }}
@@ -47,10 +48,10 @@ export class ProductDefect extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -61,17 +62,18 @@ export class ProductDefect extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/VpF6ajh59fI"
-            title="AdsMol Video"
+            src="https://www.youtube.com/embed/uA60X8ViZrk"
+            title="Product Defect Detection"
           />
           <br />
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
   }
 }
 
-export default ProductDefect;
+export default AdsMol;

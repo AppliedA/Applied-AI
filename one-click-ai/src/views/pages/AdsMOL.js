@@ -6,18 +6,19 @@ import Yt from '../utils/Yt';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
-
+import image from '../../images/targeted-ads-system.jpg';
 export class AdsMol extends Component {
   constructor() {
     super();
     this.title1 = 'Targeted Ads Based on Gender/Age';
     this.title2 = 'Working Demo of Project';
-    this.smalltitle1 = 'Deep learning';
+    this.smalltitle1 = 'Computer Vision';
     this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
     this.githublink = '#';
+    this.tags = ['opencv','caffemodel','face detection'];
     this.description =
-      'Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  Lorem ipsum dolor dsfsd sdf fd gf fg fg  sdf sds r trag tagr gtye sit amet, consectetur  adipiscing elit. Phasellus ullamcorper tortor elementum massa posuere, id pretium est eleifend. Donec eu eros sed nibh lobortis facilisis. In mollis odio laoreet ipsum lacinia rutrum. Cras nulla massa, gravida sagittis pulvinar sed, faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  }
+      'Ads play a crucial role in marketing of the product and revenue generation. Targeted ads are significantly effective in attracting customers. This project encompasses gender and age of a human and addresses specific ads related to the age group and gender.'
+    }
 
   render() {
     let style = {
@@ -47,10 +48,10 @@ export class AdsMol extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} />
+            <Description desc={this.description} tags = {this.tags} />
             <img
               className="desc-img"
-              src="https://picsum.photos/400/300"
+              src={image}
               alt={this.title}
             />
           </div>
@@ -68,6 +69,7 @@ export class AdsMol extends Component {
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
+          <br/>
         </div>
       </div>
     );
