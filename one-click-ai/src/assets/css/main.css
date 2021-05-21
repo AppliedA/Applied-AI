@@ -37,8 +37,12 @@ body {
   align-items: center;
 }
 
+.items-start {
+  align-items: start;
+}
+
 .card-wrapper {
-  /* margin-top: 30px; */
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -305,7 +309,7 @@ body {
 
 .footer {
   width: 100%;
-  padding: 10px;
+  padding: 20px 10px;
   background-color: rgb(61, 61, 61);
   color: white;
   font-weight: 500;
@@ -373,7 +377,7 @@ body {
   overflow: hidden;
 }
 
-.bg-video-wrapper::after {
+/* .bg-video-wrapper::after {
   content: '';
   position: absolute;
   top: 0;
@@ -382,6 +386,11 @@ body {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+} */
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .bg-video {
@@ -396,20 +405,23 @@ body {
 }
 
 .hero-section-wrapper {
-  z-index: 1;
-  color: white;
-  padding: 40px 0 0 40px;
+  padding: 40px;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .hero-desc {
   display: block;
   font-size: 18px;
   margin-top: 30px;
-  width: 50vw;
+  width: 60%;
 }
 
 .scroll-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
   display: block;
   width: max-content;
   margin-top: 50px;
@@ -424,6 +436,7 @@ body {
 
 .scroll-down:hover {
   text-decoration: none;
+  color: gray !important;
   color: inherit;
   background: #1228a3;
 }
@@ -433,7 +446,20 @@ body {
   border: 3px solid #001cbb;
 }
 
+.lottie-gif {
+  width: 300px;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 625px) {
+  .hero-desc-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .lottie-gif {
+    width: 200px;
+  }
+
   .hero-desc {
     width: 80vw;
   }

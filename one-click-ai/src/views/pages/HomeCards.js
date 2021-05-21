@@ -169,12 +169,18 @@ export class HomeCards extends Component {
             <source src="./videos/video.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
           </video>
-          <div className="hero-section-wrapper">
-            <h1>Applied AI Lab</h1>
-            <span className="hero-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eveniet ipsa beatae, facilis nemo provident, aliquid explicabo deleniti quo eum laboriosam ex pariatur ipsum animi cumque cupiditate! Repellendus, omnis distinctio. Repellat dolores quisquam excepturi, non tempora magni temporibus culpa similique?</span>
-            <a href="#project-section" className="scroll-down">lorem ipsum</a>
+          <a href="#about-section" className="scroll-down">lore ipsum</a>
+        </div>
+        <div className="hero-section-wrapper" id="about-section">
+          <h1 className="hero-header">Applied AI Lab</h1>
+          <div className="flex items-start hero-desc-wrapper">
+            <span className="hero-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore voluptatum dolorem, dolore quas excepturi eveniet dolor ut rerum ipsa fugit consectetur consequatur, eaque iste maxime ab beatae eius sequi corrupti blanditiis illum. Ex voluptatem praesentium dicta beatae ducimus libero commodi, dolore, saepe perferendis facere nam voluptas id, laudantium accusantium eos quam doloribus. Perspiciatis repellat rerum iusto error laudantium maiores quia.</span>
+            <div className="flex items-center justify-center" style={{ flexGrow: "1" }}>
+              <img className="lottie-gif" src="./images/lottie.gif" alt="lottie animation" />
+            </div>
           </div>
         </div>
+        <h1 className="hero-header">Our Projects</h1>
         <div className="card-wrapper" id="project-section">
           {this.domains.map((data, index) => this.renderCards(data, index))}
         </div>
