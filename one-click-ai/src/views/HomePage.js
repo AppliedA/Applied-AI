@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Switch,
-    Route
-} from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 
 import NavBar from './utils/NavBar';
 import HomeCards from './pages/HomeCards';
@@ -24,35 +21,36 @@ import Security from './pages/Security';
 import Recommendation from './pages/Recommendation';
 import CarPrice from './pages/CarPrice';
 import DrugEffectiveness from './pages/DrugEffectiveness';
+import NotFound from './pages/NotFound';
 export class HomePage extends Component {
-
-    render() {
-        return (
-            <>
-                <NavBar />
-                <Switch>
-                    <Route path="/" component={HomeCards} exact />
-                    <Route path="/nlp" component={Sentiment} />
-                    <Route path="/nlp-2" component={ImageCaptioning} />
-                    <Route path="/ar-1" component={RealtimeObjPloat} />
-                    <Route path="/ar-2" component={Maskingobj} />
-                    <Route path="/disaster-prediction" component={DisasterPrediction} />
-                    <Route path="/product-defect-prediction" component={ProductDefect} />
-                    <Route path="/automatic-attendance" component={AutoAttendance} />
-                    <Route path="/alexa" component={Alexa} />
-                    <Route path="/car" component={Car} />
-                    <Route path="/security" component={Security} />
-                    <Route path="/face-mask-detection" component={FaceMask} />
-                    <Route path="/object-detection" component={ObjectDetection} />
-                    <Route path="/targeted-ads" component={AdsMOL} />
-                    <Route path="/book-movie" component={Recommendation} />
-                    <Route path="/car-price" component={CarPrice} />
-                    <Route path="/drug" component={DrugEffectiveness} />
-                </Switch>
-                <Footer />
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <NavBar />
+        <Switch>
+          <Route path="/" component={HomeCards} exact />
+          <Route path="/nlp" component={Sentiment} />
+          <Route path="/nlp-2" component={ImageCaptioning} />
+          <Route path="/ar-1" component={RealtimeObjPloat} />
+          <Route path="/ar-2" component={Maskingobj} />
+          <Route path="/disaster-prediction" component={DisasterPrediction} />
+          <Route path="/product-defect-prediction" component={ProductDefect} />
+          <Route path="/automatic-attendance" component={AutoAttendance} />
+          <Route path="/alexa" component={Alexa} />
+          <Route path="/car" component={Car} />
+          <Route path="/security" component={Security} />
+          <Route path="/face-mask-detection" component={FaceMask} />
+          <Route path="/object-detection" component={ObjectDetection} />
+          <Route path="/targeted-ads" component={AdsMOL} />
+          <Route path="/book-movie" component={Recommendation} />
+          <Route path="/car-price" component={CarPrice} />
+          <Route path="/drug" component={DrugEffectiveness} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+        <Footer />
+      </>
+    );
+  }
 }
 
-export default HomePage
+export default HomePage;

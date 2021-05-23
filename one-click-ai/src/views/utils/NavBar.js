@@ -1,112 +1,112 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import HomeIcon from "@material-ui/icons/Home";
-import AddIcon from "@material-ui/icons/Add";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import LocalLibraryIcon from "@material-ui/icons/LocalLibrary";
-import Modal from "@material-ui/core/Modal";
-import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "@material-ui/core/Fade";
-import { Grid } from "@material-ui/core";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import HomeIcon from '@material-ui/icons/Home';
+import AddIcon from '@material-ui/icons/Add';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import { Grid } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 export class NavBar extends Component {
   constructor() {
     super();
     this.links = [
       {
-        target: "/",
-        name: "Home",
+        target: '/',
+        name: 'Home',
       },
       {
-        target: "modal",
-        name: "Projects",
+        target: 'modal',
+        name: 'Projects',
       },
       {
-        target: "https://github.com/AppliedA/Applied-AI",
-        name: "Github",
+        target: 'https://github.com/AppliedA/Applied-AI',
+        name: 'Github',
       },
       {
-        target: "https://www.youtube.com/",
-        name: "YouTube",
+        target: 'https://www.youtube.com/',
+        name: 'YouTube',
       },
     ];
     this.project_list = [
       {
-        target: "/nlp",
-        name: "Sentiment Analysis",
+        target: '/nlp',
+        name: 'Sentiment Analysis',
       },
       {
-        target: "/nlp-2",
-        name: "Image Captioning",
+        target: '/nlp-2',
+        name: 'Image Captioning',
       },
       {
-        target: "/ar-1",
-        name: "Real Time Object Plotation",
+        target: '/ar-1',
+        name: 'Real Time Object Plotation',
       },
       {
-        target: "/ar-2",
-        name: "Masking Object",
+        target: '/ar-2',
+        name: 'Masking Object',
       },
       {
-        target: "/disaster-prediction",
-        name: "Disaster Prediction",
+        target: '/disaster-prediction',
+        name: 'Disaster Prediction',
       },
       {
-        target: "/product-defect-prediction",
-        name: "Product Defect Predection",
+        target: '/product-defect-prediction',
+        name: 'Product Defect Predection',
       },
       {
-        target: "/automatic-attendance",
-        name: "Automatic Attendance",
+        target: '/automatic-attendance',
+        name: 'Automatic Attendance',
       },
       {
-        target: "/alexa",
-        name: "Alexa",
+        target: '/alexa',
+        name: 'Alexa',
       },
       {
-        target: "/car",
-        name: "Car",
+        target: '/car',
+        name: 'Car',
       },
       {
-        target: "/security",
-        name: "Security",
+        target: '/security',
+        name: 'Security',
       },
       {
-        target: "/face-mask-detection",
-        name: "Face Mask Detection",
+        target: '/face-mask-detection',
+        name: 'Face Mask Detection',
       },
       {
-        target: "/object-detection",
-        name: "Object Detection",
+        target: '/object-detection',
+        name: 'Object Detection',
       },
       {
-        target: "/targeted-ads",
-        name: "Targetted Ads",
+        target: '/targeted-ads',
+        name: 'Targetted Ads',
       },
       {
-        target: "/book-movie",
-        name: "Movie Recommendation System",
+        target: '/book-movie',
+        name: 'Movie Recommendation System',
       },
       {
-        target: "/car-price",
-        name: "Car Price",
+        target: '/car-price',
+        name: 'Car Price',
       },
       {
-        target: "/drug",
-        name: "Drug Effectiveness",
+        target: '/drug',
+        name: 'Drug Effectiveness',
       },
     ];
     this.state = {
@@ -130,17 +130,17 @@ export class NavBar extends Component {
       onKeyDown={this.toggleDrawer(false)}
     >
       <List style={styles.fullList}>
-        {this.links.map((page) => {
+        {this.links.map(page => {
           let target = page.target;
 
-          return page.name === "Home" ? (
+          return page.name === 'Home' ? (
             <Link to={`${target}`} className="link-sidebar" key={page.target}>
               <ListItem button>
                 <ListItemIcon>{this.renderIcons(page.name)}</ListItemIcon>
                 <ListItemText style={styles.text} primary={page.name} />
               </ListItem>
             </Link>
-          ) : page.name === "Projects" ? (
+          ) : page.name === 'Projects' ? (
             <div onClick={this.handleOpen} key={page.target}>
               <ListItem button>
                 <ListItemIcon>{this.renderIcons(page.name)}</ListItemIcon>
@@ -166,27 +166,27 @@ export class NavBar extends Component {
     </div>
   );
 
-  renderIcons = (name) => {
+  renderIcons = name => {
     name = name.toLowerCase();
     switch (name) {
-      case "home":
+      case 'home':
         return <HomeIcon />;
-      case "projects":
+      case 'projects':
         return <LocalLibraryIcon />;
-      case "github":
+      case 'github':
         return <GitHubIcon />;
-      case "youtube":
+      case 'youtube':
         return <YouTubeIcon />;
       default:
         return <AddIcon />;
     }
   };
 
-  toggleDrawer = (open) => (event) => {
+  toggleDrawer = open => event => {
     if (
       event !== undefined &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
     ) {
       return;
     }
@@ -200,14 +200,14 @@ export class NavBar extends Component {
           <Toolbar style={styles.flex}>
             <Link to="/">
               <img
-                style={{ width: "42px" }}
+                style={{ width: '42px' }}
                 src="./images/logo.png"
                 alt="one click ai logo"
               />
             </Link>
             <Link to="/">
               <Typography variant="h6">
-                <span style={{ color: "white" }}>Applied AI Lab</span>
+                <span style={{ color: 'white' }}>Applied AI Lab</span>
               </Typography>
             </Link>
             <IconButton
@@ -219,7 +219,7 @@ export class NavBar extends Component {
               <MenuIcon />
             </IconButton>
             <SwipeableDrawer
-              anchor={"right"}
+              anchor={'right'}
               open={this.state.drawer}
               onClose={this.toggleDrawer(false)}
               onOpen={this.toggleDrawer(true)}
@@ -257,6 +257,7 @@ export class NavBar extends Component {
                       onClick={() => {
                         this.setState({ open: false });
                       }}
+                      key={index}
                     >
                       <Card
                         className="project_card"
@@ -287,20 +288,20 @@ export class NavBar extends Component {
 
 const styles = {
   text: {
-    textAlign: "left",
-    color: "black",
+    textAlign: 'left',
+    color: 'black',
   },
   fullList: {
-    width: "auto",
+    width: 'auto',
   },
   flex: {
-    display: "flex",
-    justifyContent: "space-between",
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   title: {
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#e6e6e6",
+    fontWeight: 'bold',
+    color: '#e6e6e6',
   },
 };
 

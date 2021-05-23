@@ -15,18 +15,18 @@ export class AdsMol extends Component {
     this.smalltitle1 = 'Computer Vision';
     this.smalltitle2 = 'Targeted Ads Based on Gender/Age';
     this.githublink = '#';
-    this.tags = ['opencv','caffemodel','face detection'];
+    this.tags = ['opencv', 'caffemodel', 'face detection'];
     this.description =
-      'Ads play a crucial role in marketing of the product and revenue generation. Targeted ads are significantly effective in attracting customers. This project encompasses gender and age of a human and addresses specific ads related to the age group and gender.'
-    }
+      'Ads play a crucial role in marketing of the product and revenue generation. Targeted ads are significantly effective in attracting customers. This project encompasses gender and age of a human and addresses specific ads related to the age group and gender.';
+  }
 
   render() {
     let style = {
       width: '100%',
       display: 'flex',
-      'flex-wrap': 'wrap',
-      'justify-content': 'center',
-      'align-items': 'center',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
     };
 
     let iconsize = {
@@ -48,12 +48,8 @@ export class AdsMol extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} tags = {this.tags} />
-            <img
-              className="desc-img"
-              src={image}
-              alt={this.title}
-            />
+            <Description desc={this.description} tags={this.tags} />
+            <img className="desc-img" src={image} alt={this.title} />
           </div>
           <br />
           <br />
@@ -69,7 +65,7 @@ export class AdsMol extends Component {
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
-          <br/>
+          <br />
         </div>
       </div>
     );

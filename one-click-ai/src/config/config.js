@@ -1,5 +1,4 @@
-require('dotenv').config();
-const { FB_API } = process.env;
+const FB_API = process.env.REACT_APP_FB_API;
 export const firebaseConfig = {
   apiKey: FB_API,
   authDomain: 'applied-ai-lab.firebaseapp.com',

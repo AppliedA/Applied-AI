@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SmallTitle from '../utils/SmallTitle';
 import { GoMarkGithub } from 'react-icons/go';
 import image from '../../images/image_captioning.png';
+import ImagePrediction from '../utils/ImagePrediction';
 export class AdsMol extends Component {
   constructor() {
     super();
@@ -15,10 +16,10 @@ export class AdsMol extends Component {
     this.smalltitle1 = 'NLP';
     this.smalltitle2 = 'Image Captioning';
     this.githublink = '#';
-    this.tags = ['numpy','keras','pandas'];
+    this.tags = ['numpy', 'keras', 'pandas'];
     this.description =
-      'Image delivers a subjective message to the viewers. This project testifies what an AI system judges over an image and captions it as per its knowledge base provided. It can help many disable people get an idea of the environment surrounding them.'
-    }
+      'Image delivers a subjective message to the viewers. This project testifies what an AI system judges over an image and captions it as per its knowledge base provided. It can help many disable people get an idea of the environment surrounding them.';
+  }
 
   render() {
     let style = {
@@ -48,12 +49,8 @@ export class AdsMol extends Component {
           <br />
           <br />
           <div style={style}>
-            <Description desc={this.description} tags = {this.tags} />
-            <img
-              className="desc-img"
-              src={image}
-              alt={this.title}
-            />
+            <Description desc={this.description} tags={this.tags} />
+            <img className="desc-img" src={image} alt={this.title} />
           </div>
           <br />
           <br />
@@ -69,8 +66,9 @@ export class AdsMol extends Component {
           <a href={this.githublink}>
             <GoMarkGithub style={iconsize} /> Code on Github
           </a>
-          <br/>
+          <br />
         </div>
+        <ImagePrediction />
       </div>
     );
   }

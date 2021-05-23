@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { setApiKey, callStandardApi } from 'deepai';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -10,6 +12,8 @@ import SnackbarContent from '@material-ui/core/SnackbarContent';
 import Button from '@material-ui/core/Button';
 
 import firebase from 'firebase/app';
+const DEEP_AI = process.env.REACT_APP_DEEP_AI;
+setApiKey(DEEP_AI);
 
 const useStyles = makeStyles(theme => ({
   backdrop: {
@@ -23,6 +27,7 @@ const ImagePrediction = () => {
   const [progress, setProgress] = useState(null);
   const [downloadUrl, setDownloadUrl] = useState('');
   const [msg, setMsg] = useState('');
+  const [output, setOutput] = useState('');
   const [msgColor, setMsgColor] = useState('#ff9800');
   const classes = useStyles();
 
@@ -53,10 +58,11 @@ const ImagePrediction = () => {
   const handleFiles = async file => {
     try {
       const extName = file.name.split('.').pop();
-      const ext = ['jpeg', 'png', 'gif', 'jpg'];
+      const ext = ['jpeg', 'png', 'gif', 'jpg', 'jfif'];
       const extRes = ext.findIndex(res => res === extName);
 
-      if (extRes === undefined || extRes === -1) return;
+      if (extRes === undefined || extRes === -1)
+        return setMsg('Not a valid Image');
 
       const metaData = {
         contentType: file.type,
@@ -119,7 +125,19 @@ const ImagePrediction = () => {
   };
   const handlePredict = async () => {
     if (downloadUrl === '') return setMsg('Please Upload Image');
-    // FIXME: Dummy API REQUEST
+    try {
+      await callStandardApi('neuraltalk', {
+        image: downloadUrl,
+      })
+        .then(res => {
+          setOutput(res.output);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
@@ -227,8 +245,8 @@ const ImagePrediction = () => {
               <img src={downloadUrl} alt="input-img" />
             </div>
             <div className="align__center m-4">
-              <h3>Output Image</h3>
-              <img src={downloadUrl} alt="Output-img" />
+              <h3>Output</h3>
+              <h5>{output}</h5>
             </div>
           </div>
           <div className="flex__newline"></div>
