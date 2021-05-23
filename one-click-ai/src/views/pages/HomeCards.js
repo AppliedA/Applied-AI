@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Box from "@material-ui/core/Box";
 import ListItem from "@material-ui/core/ListItem";
 import { Helmet } from "react-helmet";
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 export class HomeCards extends Component {
   constructor() {
@@ -169,12 +170,20 @@ export class HomeCards extends Component {
             <source src="./videos/video.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
           </video>
-          <a href="#about-section" className="scroll-down">lore ipsum</a>
+          <a href="#about-section" className="scroll-down">
+            <ArrowDownwardIcon />
+          </a>
         </div>
         <div className="hero-section-wrapper" id="about-section">
           <h1 className="hero-header">Applied AI Lab</h1>
           <div className="flex items-start hero-desc-wrapper">
-            <span className="hero-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore voluptatum dolorem, dolore quas excepturi eveniet dolor ut rerum ipsa fugit consectetur consequatur, eaque iste maxime ab beatae eius sequi corrupti blanditiis illum. Ex voluptatem praesentium dicta beatae ducimus libero commodi, dolore, saepe perferendis facere nam voluptas id, laudantium accusantium eos quam doloribus. Perspiciatis repellat rerum iusto error laudantium maiores quia.</span>
+            <span className="hero-desc">
+              Applied AI Lab is the junction where all subsection of Artificial Intelligence Intersects....
+              <br />
+                We have build several application oriented AI projects. Our Scope of projects encompasses a broad range of subsections of Artificial Intelligence from Computer Vision followed by IOT, AR, Deep Learning, Natural Language Processing and Machine Learning.
+              <br />
+                One - Click AI is an initiative from Applied AI Lab where one can actually run all the developed projects of AI within clicks over the web.
+            </span>
             <div className="flex items-center justify-center" style={{ flexGrow: "1" }}>
               <img className="lottie-gif" src="./images/lottie.gif" alt="lottie animation" />
             </div>

@@ -430,14 +430,13 @@ body {
   color: white;
   text-decoration: none;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
 .scroll-down:hover {
   text-decoration: none;
-  color: gray !important;
-  color: inherit;
+  color: white;
   background: #1228a3;
 }
 
