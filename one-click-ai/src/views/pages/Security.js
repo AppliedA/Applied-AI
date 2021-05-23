@@ -62,7 +62,7 @@ export class AdsMol extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/dgst0_gmol4"
+            src="https://www.youtube.com/embed/2eZaZ7Ptsnc"
             title="Smart Dustbin"
           />
           <br />

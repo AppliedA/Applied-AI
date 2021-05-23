@@ -76,7 +76,7 @@ export class HomeCards extends Component {
             target: "car",
           },
           {
-            name: "Smart Security System",
+            name: "Smart Dustbin",
             target: "security",
           },
         ],
