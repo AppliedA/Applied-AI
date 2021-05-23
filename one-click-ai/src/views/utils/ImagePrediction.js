@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import Axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -121,9 +120,6 @@ const ImagePrediction = () => {
   const handlePredict = async () => {
     if (downloadUrl === '') return setMsg('Please Upload Image');
     // FIXME: Dummy API REQUEST
-    const { data } = await Axios.get(`https://randomuser.me/api`);
-    const tempDetails = data.results[0];
-    console.log(tempDetails);
   };
   return (
     <>
