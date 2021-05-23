@@ -54,35 +54,35 @@ export class NavBar extends Component {
       },
       {
         target: '/ar-1',
-        name: 'Real Time Object Plotation',
+        name: 'Realtime 2D/3D Object Plotting',
       },
       {
         target: '/ar-2',
-        name: 'Masking Object',
+        name: 'Masking videos on real world objects',
       },
       {
         target: '/disaster-prediction',
-        name: 'Disaster Prediction',
+        name: 'Disaster Prediction using Satellite Imaging',
       },
       {
         target: '/product-defect-prediction',
-        name: 'Product Defect Predection',
+        name: 'Product Defect Detection',
       },
       {
         target: '/automatic-attendance',
-        name: 'Automatic Attendance',
+        name: 'Auto Attendance using Face Recognition',
       },
       {
         target: '/alexa',
-        name: 'Alexa',
+        name: 'Control Home Appliances using Alexa',
       },
       {
         target: '/car',
-        name: 'Car',
+        name: 'Self Driving Car',
       },
       {
         target: '/security',
-        name: 'Security',
+        name: 'Smart Dustbin',
       },
       {
         target: '/face-mask-detection',
@@ -94,7 +94,7 @@ export class NavBar extends Component {
       },
       {
         target: '/targeted-ads',
-        name: 'Targetted Ads',
+        name: 'Targeted Ads based on Age',
       },
       {
         target: '/book-movie',
@@ -102,11 +102,11 @@ export class NavBar extends Component {
       },
       {
         target: '/car-price',
-        name: 'Car Price',
+        name: 'Car Price Prediction',
       },
       {
         target: '/drug',
-        name: 'Drug Effectiveness',
+        name: 'Drug Effectiveness Analysis',
       },
     ];
     this.state = {
