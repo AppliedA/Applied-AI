@@ -181,8 +181,7 @@ const ImagePrediction = () => {
           />
         </Snackbar>
         <h2 className="p-3">
-          Upload any image of disaster and our AI model will predict the
-          disaster right on the browser!
+          Upload the image and our AI Model will predict the caption for it!
         </h2>
         <div className="upload__cover mt-4">
           <div
