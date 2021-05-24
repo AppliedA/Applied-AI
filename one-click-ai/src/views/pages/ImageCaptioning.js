@@ -59,7 +59,7 @@ export class AdsMol extends Component {
           <SmallTitle title={this.smalltitle2} />
           <br />
           <Yt
-            src="https://www.youtube.com/embed/HUN_1Xjs_nU"
+            src="https://www.youtube.com/embed/5WOA4CDzBFs"
             title="Image Captioning"
           />
           <br />
