@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Dustbin 🗑️ - IoT Project</title>
+    <link rel="icon" href="favicon.png" type="image/gif" sizes="256x259" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="container text-center">
+    <h1 class="mt-4 mb-4">
+      Smart Dustbin 🗑️
+    </h1>
+    <h4 class="text-secondary">
+      Fetching data from google cloud...
+      <span class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </span>
+    </h4>
+    <audio id="myAudio" loop>
+      <source src="alarm.mp3" type="audio/ogg" />
+      <source src="alarm.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <!-- <div
+      class="spinner-border spinner-border-lg text-success m-5"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div> -->
+
+    <div class="pb-4 pt-4">
+      <svg
+        id="dustbin"
+        fill="url(#grad3)"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="300px"
+        height="300px"
+      >
+        <defs>
+          <linearGradient id="grad3" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="8%" style="stop-color: green; stop-opacity: 0.8;" />
+            <stop offset="60%" style="stop-color: white; stop-opacity: 1;" />
+          </linearGradient>
+        </defs>
+        <path
+          stroke="black"
+          stroke-width="0.2"
+          d="M 10.3125 -0.03125 C 8.589844 -0.03125 7.164063 1.316406 7 3 L 2 3 L 2 5 L 6.96875 5 L 6.96875 5.03125 L 17.03125 5.03125 L 17.03125 5 L 22 5 L 22 3 L 17 3 C 16.84375 1.316406 15.484375 -0.03125 13.8125 -0.03125 Z M 10.3125 2.03125 L 13.8125 2.03125 C 14.320313 2.03125 14.695313 2.429688 14.84375 2.96875 L 9.15625 2.96875 C 9.296875 2.429688 9.6875 2.03125 10.3125 2.03125 Z M 4 6 L 4 22.5 C 4 23.300781 4.699219 24 5.5 24 L 18.59375 24 C 19.394531 24 20.09375 23.300781 20.09375 22.5 L 20.09375 6 Z M 7 9 L 8 9 L 8 22 L 7 22 Z M 10 9 L 11 9 L 11 22 L 10 22 Z M 13 9 L 14 9 L 14 22 L 13 22 Z M 16 9 L 17 9 L 17 22 L 16 22 Z"
+        />
+      </svg>
+    </div>
+    <span class="mx-auto">
+      <h2 id="report"></h2>
+    </span>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        // Your firebase project config
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="scripts/index.js" defer></script>
+  </body>
+</html>

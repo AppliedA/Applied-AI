@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Speak to Operate : Smart Home | IoT</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+  <p class="line1"> Home Made Alexa </p>
+  <p class="line"> Click on the mic and speak to operate...</p>
+  <!-- <button  style="background-color: #222032; color: #222032; border: 1px solid #222032; " type="button" onclick="runSpeechRecognition()"> -->
+    <div id="micbutton" onclick="runSpeechRecognition()">
+      <div class="box">
+      	 <div class="object">
+      			<!-- <div class="outline">
+      			</div>
+      			<div class="outline" id="delayed">
+      			</div> -->
+
+      			<div class="button">
+      			</div>
+      			<div class="button" id="circlein">
+      				<svg class="mic-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" style="fill:#1E2D70">
+      <g><path d="M500,683.8c84.6,0,153.1-68.6,153.1-153.1V163.1C653.1,78.6,584.6,10,500,10c-84.6,0-153.1,68.6-153.1,153.1v367.5C346.9,615.2,415.4,683.8,500,683.8z M714.4,438.8v91.9C714.4,649,618.4,745,500,745c-118.4,0-214.4-96-214.4-214.4v-91.9h-61.3v91.9c0,141.9,107.2,258.7,245,273.9v124.2H346.9V990h306.3v-61.3H530.6V804.5c137.8-15.2,245-132.1,245-273.9v-91.9H714.4z"/></g>
+      </svg>
+      			</div>
+      	 </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	var firebaseConfig = {
+	
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+
+  <!-- Local JS -->
+  <script src="js/main.js" charset="utf-8"></script>
+
+
+
+</body>
+</html>
